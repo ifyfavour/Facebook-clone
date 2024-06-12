@@ -1,0 +1,957 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-template-rows: 10vh 110vh;
+  row-gap: 0.5vh;
+}
+
+header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.header-div {
+  width: 95vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.fb-icon {
+  font-size: 45px;
+  color: blue;
+  /* background-color: black; */
+  border-radius: 100%;
+}
+
+.fb-icon:hover {
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.search-icon {
+  color: gray;
+  position: absolute;
+  margin-right: 130px;
+}
+
+.input-one {
+  width: 18vw;
+  height: 7vh;
+  border-radius: 30px;
+  border: none;
+  background-color: whitesmoke;
+  padding-left: 40px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.logo-input {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+.icon-div {
+  width: 40vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.icon-div div {
+  width: 8vw;
+  height: 10vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1ms;
+}
+
+.icon-div div:hover {
+  border-bottom: 3px solid blue;
+}
+
+a.active {
+  width: 8vw;
+  height: 10vh;
+  border-bottom: 3px solid red;
+}
+
+.icon-div i {
+  font-size: 20px;
+  color: gray;
+  transition: 1ms;
+}
+
+.icon-div div:hover i {
+  color: blue;
+}
+
+.notify-div {
+  width: 15vw;
+  height: 10vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  transition: 1s;
+}
+
+.list-div:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.messenger-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  transition: 1s;
+}
+
+.messenger-div:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.bell-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  transition: 1s;
+}
+
+.bell-div:hover {
+  background-color: blue;
+  color: white;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.left {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: whitesmoke;
+  /* border: 1px solid gray; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.left-y-overflow {
+  width: 25vw;
+  height: 110vh;
+  overflow-y: auto;
+  /* border: 1px solid red; */
+  display: grid;
+  place-items: center;
+}
+
+.left-y-overflow::-webkit-scrollbar {
+  width: 10px;
+}
+
+.left-div {
+  width: 20vw;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.left-divs {
+  width: 20vw;
+  height: 10vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.left-divs:hover {
+  background-color: white;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+}
+
+.left-divs span {
+  margin-left: 10px;
+}
+
+.center {
+  overflow-y: auto;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  /* border: 1px solid gray; */
+}
+
+.center::-webkit-scrollbar {
+  width: 10px;
+}
+
+.center-div {
+  width: 50vw;
+  height: 210vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.center-x-overflow {
+  width: 50vw;
+  height: 50vh;
+  overflow-x: auto;
+  /* border: 1px solid blue; */
+  display: grid;
+  place-items: center;
+}
+
+.center-x-overflow::-webkit-scrollbar {
+  width: 10px;
+}
+
+.stories-div {
+  width: 110vw;
+  height: 45vh;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.story1 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: brown;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story1:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./bckgroundless-elon\ musk.png);
+  background-size: cover;
+}
+.story1 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story1 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story1 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.story2 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: red;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story2:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./Elon_Musk_Colorado_2022_\(cropped2\).jpg);
+  background-size: cover;
+}
+.story2 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story2 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story2 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+.story3 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: purple;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story3:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./Blur\ Background\ Office.jpg);
+  background-size: cover;
+}
+.story3 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story3 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story3 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.story4 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: pink;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story4:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./Elon_Musk_Colorado_2022_\(cropped2\).jpg);
+  background-size: cover;
+}
+.story4 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story4 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story4 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+.story5 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: green;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story5:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./bckgroundless-elon\ musk.png);
+  background-size: cover;
+}
+.story5 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story5 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story5 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.story6 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: orange;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story6:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./Blur\ Background\ Office.jpg);
+  background-size: cover;
+}
+.story6 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story6 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story6 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.story7 {
+  width: 15vw;
+  transition: 2s;
+  height: 45vh;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.story7:hover {
+  opacity: 70%;
+  box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  background-image: url(./Elon_Musk_Colorado_2022_\(cropped2\).jpg);
+  background-size: cover;
+}
+.story7 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.story7 div {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.story7 p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.yourmind {
+  width: 40vw;
+  height: 25vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.yourmind-div {
+  width: 35vw;
+  height: 20vh;
+  /* border: 1px solid black; */
+}
+
+.yourmind-up {
+  width: 35vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yourmind-down {
+  width: 35vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yourmind-down div {
+  width: 11.6vw;
+  height: 7.5vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-two {
+  width: 30vw;
+  height: 6vh;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  border: none;
+  padding-left: 20px;
+}
+
+.mind-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.google-Ads {
+  width: 40vw;
+  height: 110vh;
+  /* box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 22px -12px rgba(0, 0, 0, 0.75); */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+}
+
+.google-Ads-div {
+  width: 37vw;
+  height: 20vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.google-Ads-up {
+  width: 37vw;
+  height: 20vh;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sponsor-div {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  /* border: 1px solid red; */
+}
+
+.sponsor-div-div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe-sponsor-div {
+  margin-left: 10px;
+}
+
+.cancel-div {
+  width: 5vw;
+  height: 10vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.google-Ads-down {
+  width: 40vw;
+  height: 80vh;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-Ads-down-div {
+  width: 37vw;
+  height: 80vh;
+  /* border: 1px solid black; */
+}
+
+.background {
+  width: 37vw;
+  height: 45vh;
+  margin-top: 60px;
+}
+
+.woman {
+  position: absolute;
+  margin-left: -37vw;
+  bottom: 20vh;
+  height: 65vh;
+  width: 20vw;
+  z-index: 5;
+}
+
+.btn1 {
+  width: 10vw;
+  height: 7vh;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bolder;
+  transition: 1s;
+}
+
+.btn1:hover {
+  background-color: transparent;
+  border: 1px solid blue;
+  color: blue;
+}
+.right {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 23vw;
+}
+.right::-webkit-scrollbar {
+  width: 10px;
+}
+.right-y-overflow {
+  height: 200vh;
+  width: 23vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.right-div {
+  width: 21vw;
+  height: 190vh;
+}
+.fr-rq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 19vw;
+  height: 10vh;
+}
+.name-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  flex-direction: column;
+}
+.name {
+  width: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.confirm-btn {
+  width: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+.top-rt {
+  width: 21vw;
+  display: flex;
+  justify-content: space-around;
+}
+.birth {
+  width: 18vw;
+}
+
+.con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 21vw;
+}
+.com-list {
+  display: flex;
+  align-items: center;
+}
+.people {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13vw;
+}
+.top {
+  display: none;
+}
+.google {
+  width: 18vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1080px) {
+  main {
+    grid-template-columns: 70vw 30vw;
+  }
+  .left {
+    display: none;
+  }
+  .center {
+    grid-column: 1/2;
+  }
+  .right {
+    grid-column: 2/3;
+    width: 30vw;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10vw;
+  }
+  .pm {
+    display: none;
+  }
+  .notify-div {
+    width: 20vw;
+  }
+  .shop {
+    display: none;
+  }
+}
+@media only screen and (max-width: 899px) {
+  main {
+    grid-template-columns: 95vw;
+  }
+  .right {
+    display: none;
+  }
+  .google-Ads {
+    width: 50vw;
+  }
+  .google-Ads-up {
+    width: 47vw;
+  }
+  .google-Ads-down {
+    width: 50vw;
+  }
+  .google-Ads-down-div {
+    width: 47vw;
+  }
+  .google-Ads-div {
+    width: 47vw;
+  }
+  .google {
+    width: 20vw;
+  }
+  .yourmind {
+    width: 50vw;
+  }
+  .yourmind-div {
+    width: 40vw;
+  }
+  .yourmind-down {
+    width: 40vw;
+  }
+  .yourmind-up {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 95vw;
+  }
+  .center {
+    grid-column: 1/3;
+  }
+  .stories-div {
+    width: 160vw;
+  }
+  .icon-div {
+    display: none;
+  }
+  .notify-div {
+    width: 30vw;
+  }
+  .top {
+    width: 15vw;
+  }
+  .google {
+    width: 25vw;
+  }
+  .yourmind {
+    width: 70vw;
+  }
+  .yourmind-div {
+    width: 60vw;
+  }
+  .yourmind-up,
+  .yourmind-down {
+    width: 60vw;
+  }
+  .input-two {
+    width: 50vw;
+  }
+  .story1,
+  .story2,
+  .story3,
+  .story4,
+  .story5,
+  .story6,
+  .story7 {
+    width: 25vw;
+  }
+  .stories-div {
+    gap: 1vw;
+  }
+  .center-x-overflow {
+    width: 80vw;
+  }
+}
